@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae - Sabin Prajapati</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f3f4f6;
+        color: #111827;
+        line-height: 1.6;
+      }
+
+      .cv {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 20px auto;
+        background: white;
+        padding: 22mm;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 2px solid #111827;
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+      }
+
+      .name-section h1 {
+        font-size: 34px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .name-section p {
+        margin-bottom: 3px;
+        font-size: 14px;
+      }
+
+      .photo {
+        width: 130px;
+        height: 160px;
+        border: 1px solid #d1d5db;
+      }
+
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .section {
+        margin-bottom: 28px;
+      }
+
+      .section-title {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1px solid #111827;
+        padding-bottom: 6px;
+        margin-bottom: 15px;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .date {
+        font-weight: bold;
+      }
+
+      .content-title {
+        font-weight: bold;
+        margin-bottom: 3px;
+      }
+
+      .content-subtitle {
+        color: #4b5563;
+        margin-bottom: 8px;
+      }
+
+      ul {
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        row-gap: 10px;
+      }
+
+      .footer {
+        margin-top: 40px;
+      }
+
+      .signature {
+        margin-top: 50px;
+        width: 150px;
+      }
+
+      .signature img {
+        height: 55px;
+        display: block;
+      }
+
+      .signature-name {
+        border-top: 1px solid black;
+        padding-top: 5px;
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+
+        .cv {
+          margin: 0;
+          width: 100%;
+          padding: 15mm;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cv">
+      <div class="header">
+        <div class="name-section">
+          <h1>Sabin Prajapati</h1>
+
+          <p><strong>Date of Birth:</strong> 08 April 1998</p>
+          <p><strong>Nationality:</strong> Nepali</p>
+          <p><strong>Place of Birth:</strong> Bhaktapur, Nepal</p>
+          <p><strong>Address:</strong> Bhaktapur, Nepal</p>
+          <p><strong>Phone:</strong> +977 9766919673</p>
+          <p><strong>Email:</strong> sabinprajapati.it@gmail.com</p>
+          <p><strong>Website:</strong> sabinprajapati7.com.np</p>
+        </div>
+
+        <div class="photo">
+          <img src="photo.jpg" alt="Photo" />
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="timeline-item">
+          <div class="date">2026</div>
+
+          <div>
+            <div class="content-title">M.Sc. Web Engineering</div>
+
+            <div class="content-subtitle">
+              Technische Universität Chemnitz, Germany
+            </div>
+
+            <p>Admitted for Winter Semester 2026/27.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">2017 – 2021</div>
+
+          <div>
+            <div class="content-title">
+              Bachelor of Science in Computer Science and Information Technology
+              (BSc CSIT)
+            </div>
+
+            <div class="content-subtitle">Tribhuvan University, Nepal</div>
+
+            <p>Final Percentage: 64.5%</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">2014 – 2016</div>
+          <div>
+            <div class="content-title">
+              Higher Secondary Education (+2 Science)
+            </div>
+            <div class="content-subtitle">
+              Bagiswori Higher Secondary School
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">2014</div>
+          <div>
+            <div class="content-title">Secondary Education (SLC)</div>
+            <div class="content-subtitle">
+              Bagiswori Higher Secondary School
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="timeline-item">
+          <div class="date">Apr 2026 – Present</div>
+
+          <div>
+            <div class="content-title">Frontend Development Trainee</div>
+
+            <div class="content-subtitle">FnClick, Nepal</div>
+
+            <ul>
+              <li>Development of responsive websites and user interfaces.</li>
+              <li>Frontend implementation using HTML, CSS and JavaScript.</li>
+              <li>
+                Collaboration with backend teams and project stakeholders.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">May 2025 – Nov 2025</div>
+
+          <div>
+            <div class="content-title">Django Developer Intern</div>
+
+            <div class="content-subtitle">Mindrisers Inc., Nepal</div>
+
+            <ul>
+              <li>Backend development using Django REST Framework.</li>
+              <li>API development and database integration.</li>
+              <li>
+                Implementation of authentication systems and application
+                features.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          Professional Development and Academic Preparation
+        </h2>
+
+        <div class="timeline-item">
+          <div class="date">2022 – 2024</div>
+
+          <div>
+            <p>
+              Following completion of my Bachelor's degree, I dedicated this
+              period to advancing my technical knowledge and preparing for
+              international postgraduate studies.
+            </p>
+
+            <br />
+
+            <ul>
+              <li>
+                Completed extensive self-directed learning in software
+                engineering and web development.
+              </li>
+              <li>
+                Built and maintained multiple software and web development
+                projects.
+              </li>
+              <li>
+                Strengthened practical skills in backend and frontend
+                technologies.
+              </li>
+              <li>
+                Prepared for IELTS Academic examination and achieved an Overall
+                Band Score of 8.0.
+              </li>
+              <li>
+                Researched higher education opportunities in Germany and
+                prepared academic application documents.
+              </li>
+              <li>
+                Continued professional development through online courses,
+                technical practice and project-based learning.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Language Skills</h2>
+
+        <div class="skills-grid">
+          <div><strong>English</strong></div>
+          <div>
+            IELTS Academic Overall Band 8.0 (Listening 9.0, Reading 9.0, Writing
+            6.5, Speaking 6.5)
+          </div>
+
+          <div><strong>Nepali</strong></div>
+          <div>Native</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-grid">
+          <div><strong>Programming</strong></div>
+          <div>Python, JavaScript</div>
+
+          <div><strong>Frameworks</strong></div>
+          <div>Django, React</div>
+
+          <div><strong>Databases</strong></div>
+          <div>PostgreSQL, MySQL</div>
+
+          <div><strong>Tools</strong></div>
+          <div>Git, WordPress</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <ul>
+          <li>Everest Equity Club Platform</li>
+          <li>Learning Management System</li>
+          <li>Frontend and WordPress Development Projects</li>
+        </ul>
+      </section>
+
+      <div class="footer">
+        <p>Bhaktapur, Nepal</p>
+        <p>DD Month YYYY</p>
+
+        <div class="signature">
+          <img src="./sign.png" alt="Signature" />
+
+          <div class="signature-name">Sabin Prajapati</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
