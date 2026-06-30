@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sabin_Prajapati_CV_Germany</title>
+    <title>CV_Sabin_Prajapati_Germany</title>
     <style>
       :root {
         --primary-color: #1a3a5a;
         --secondary-color: #444;
-        --accent-color: #eeeeee;
+        --accent-color: #f8f9fa;
         --text-color: #2c3e50;
+        --border-color: #d1d1d1;
       }
 
       * {
@@ -19,48 +20,47 @@
       }
 
       body {
-        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        line-height: 1.5;
+        font-family: "Segoe UI", SegoeUI, Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
         color: var(--text-color);
-        background-color: #f5f5f5;
+        background-color: #ffffff;
         padding: 0;
       }
 
       .container {
         width: 100%;
-        min-height: 297mm;
+        max-width: 1100px; /* Limits width slightly on huge monitors for readability, but remains 100% on A4/Mobile */
         margin: 0 auto;
+        padding: 40px;
         background: white;
-        padding: 30px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       }
 
       header {
-        border-bottom: 2px solid var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
         padding-bottom: 20px;
         margin-bottom: 25px;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: flex-end;
       }
 
-      .header-text h1 {
-        font-size: 28pt;
+      .header-left h1 {
+        font-size: 32pt;
         color: var(--primary-color);
         text-transform: uppercase;
-        letter-spacing: 1px;
+        line-height: 1;
       }
 
-      .header-text p {
-        font-size: 12pt;
+      .header-left p {
+        font-size: 13pt;
         color: var(--secondary-color);
-        font-weight: bold;
-        margin-top: 5px;
+        font-weight: 600;
+        margin-top: 10px;
       }
 
       .contact-info {
         text-align: right;
-        font-size: 9.5pt;
+        font-size: 10pt;
       }
 
       .contact-info a {
@@ -69,67 +69,95 @@
       }
 
       section {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
       }
 
       h2 {
-        font-size: 14pt;
+        font-size: 15pt;
         background-color: var(--accent-color);
         color: var(--primary-color);
-        padding: 5px 15px;
+        padding: 8px 15px;
         text-transform: uppercase;
         margin-bottom: 15px;
-        border-left: 5px solid var(--primary-color);
+        border-left: 6px solid var(--primary-color);
+        width: 100%;
       }
 
+      /* Grid for the German Tabular Layout */
       .cv-row {
         display: grid;
-        grid-template-columns: 1fr 3fr;
-        margin-bottom: 15px;
+        grid-template-columns: 200px 1fr;
+        margin-bottom: 18px;
+        gap: 20px;
       }
 
       .cv-date {
         font-weight: bold;
-        font-size: 10pt;
-        color: var(--secondary-color);
+        font-size: 10.5pt;
+        color: var(--primary-color);
       }
 
       .cv-content h3 {
-        font-size: 11pt;
-        color: var(--primary-color);
-        margin-bottom: 3px;
+        font-size: 12pt;
+        color: #000;
+        margin-bottom: 4px;
       }
 
-      .cv-content .institution {
+      .institution {
         font-style: italic;
-        font-size: 10pt;
+        font-size: 10.5pt;
+        color: #555;
         margin-bottom: 8px;
         display: block;
       }
 
       .cv-content p,
       .cv-content li {
-        font-size: 10pt;
+        font-size: 10.5pt;
         text-align: justify;
       }
 
       .cv-content ul {
         margin-top: 8px;
-        margin-left: 18px;
+        padding-left: 20px;
       }
 
       .cv-content li {
-        margin-bottom: 4px;
+        margin-bottom: 5px;
+      }
+
+      /* Personal Data Table */
+      .personal-data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 40px;
+        font-size: 10.5pt;
+        padding: 0 15px;
+      }
+
+      .data-item {
+        display: flex;
+        border-bottom: 1px solid #eee;
+        padding: 5px 0;
+      }
+
+      .data-label {
+        font-weight: bold;
+        width: 140px;
+        color: var(--secondary-color);
       }
 
       .skills-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        gap: 15px;
+        padding: 0 15px;
       }
 
       .skill-item {
-        font-size: 10pt;
+        font-size: 10.5pt;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 5px;
       }
 
       .skill-item strong {
@@ -137,29 +165,46 @@
       }
 
       .declaration {
-        margin-top: 40px;
+        margin-top: 50px;
         font-size: 10pt;
         font-style: italic;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
       }
 
       .signature-area {
-        margin-top: 30px;
+        margin-top: 40px;
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .sign-box {
+        text-align: center;
+      }
+
+      .sign-line {
+        border-top: 1px solid #000;
+        margin-top: 10px;
+        padding-top: 5px;
+        min-width: 220px;
+        font-weight: bold;
       }
 
       @media print {
         body {
-          background: none;
           padding: 0;
         }
         .container {
-          box-shadow: none;
-          margin: 0;
-          width: 100%;
+          padding: 20px;
+          max-width: 100%;
         }
         @page {
+          size: A4;
           margin: 1.5cm;
+        }
+        h2 {
+          -webkit-print-color-adjust: exact;
         }
       }
     </style>
@@ -167,7 +212,7 @@
   <body>
     <div class="container">
       <header>
-        <div class="header-text">
+        <div class="header-left">
           <h1>Sabin Prajapati</h1>
           <p>Software Developer | M.Sc. Web Engineering Candidate</p>
         </div>
@@ -179,40 +224,53 @@
           ><br />
           <a href="https://www.sabinprajapati7.com.np">sabinprajapati7.com.np</a
           ><br />
-          <a href="https://github.com/sabinpr">github.com/sabinpr</a><br />
-          <a href="https://linkedin.com/in/sabin-prajapati-6b8b4523b"
-            >linkedin.com/in/sabin-prajapati-6b8b4523b</a
-          >
+          <a href="https://github.com/sabinpr">github.com/sabinpr</a>
         </div>
       </header>
 
       <section>
-        <h2>Personal Profile</h2>
-        <p style="font-size: 10.5pt">
-          Result-oriented Computer Science graduate with professional experience
-          in backend and frontend web development. Proficient in Python/Django
-          and React ecosystems, with a strong focus on building scalable RESTful
-          APIs and responsive user interfaces. Following a successful academic
-          career at Tribhuvan University, I have been admitted to the Master of
-          Science in Web Engineering at TU Chemnitz, Germany. I am eager to
-          leverage this international academic opportunity to specialize in
-          distributed systems, web security, and advanced software architecture.
+        <h2>Personal Data</h2>
+        <div class="personal-data">
+          <div class="data-item">
+            <span class="data-label">Date of Birth:</span> 08 April 1998
+          </div>
+          <div class="data-item">
+            <span class="data-label">Place of Birth:</span> Bhaktapur, Nepal
+          </div>
+          <div class="data-item">
+            <span class="data-label">Nationality:</span> Nepali
+          </div>
+          <div class="data-item">
+            <span class="data-label">Marital Status:</span> Single
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Professional Profile</h2>
+        <p style="padding: 0 15px">
+          Computer Science graduate with professional experience in full-stack
+          web development, specializing in the Python/Django and React
+          ecosystems. Expertise in building scalable RESTful APIs, implementing
+          secure authentication systems, and designing responsive user
+          interfaces. Admitted to the Master of Science in Web Engineering at TU
+          Chemnitz, Germany, to further specialize in distributed systems and
+          advanced software architecture.
         </p>
       </section>
 
       <section>
         <h2>Master's Admission (Germany)</h2>
         <div class="cv-row">
-          <div class="cv-date">Winter Semester 2026/27</div>
+          <div class="cv-date">Winter Sem. 2026/27</div>
           <div class="cv-content">
             <h3>Master of Science (M.Sc.) in Web Engineering</h3>
             <span class="institution"
               >Technische Universität Chemnitz, Germany</span
             >
             <p>
-              Advanced studies focusing on the engineering of complex web
-              applications, including distributed systems, software service
-              architectures, web security, and data management technologies.
+              Advanced focus on Web Security, Software Service Architectures,
+              Distributed Systems, and Data Management.
             </p>
           </div>
         </div>
@@ -227,20 +285,15 @@
             <span class="institution">FnClick Pvt. Ltd., Nepal</span>
             <ul>
               <li>
-                Developing responsive and interactive web components using
-                React.js and modern JavaScript (ES6+).
+                Developing interactive UI components using React.js and
+                JavaScript (ES6+).
               </li>
               <li>
-                Translating high-fidelity Figma designs into pixel-perfect,
-                cross-browser compatible HTML/CSS code.
+                Translating Figma designs into pixel-perfect HTML5/CSS3 layouts.
               </li>
               <li>
-                Collaborating with backend engineers to integrate RESTful API
-                endpoints for dynamic data rendering.
-              </li>
-              <li>
-                Optimizing frontend performance and ensuring mobile-first
-                responsiveness across all web modules.
+                Integrating RESTful APIs for dynamic data rendering and
+                optimized user experience.
               </li>
             </ul>
           </div>
@@ -255,20 +308,15 @@
             >
             <ul>
               <li>
-                Designed and implemented server-side logic using Python and the
-                Django Web Framework.
+                Developed secure REST APIs using Django REST Framework and JWT
+                authentication.
               </li>
               <li>
-                Developed secure REST APIs using Django REST Framework (DRF)
-                with JWT-based authentication.
+                Architected relational database models using PostgreSQL and
+                MySQL.
               </li>
               <li>
-                Architected relational database schemas using PostgreSQL and
-                MySQL, optimizing for query efficiency.
-              </li>
-              <li>
-                Utilized Git for version control and participated in agile code
-                reviews and sprint planning.
+                Managed version control and team collaboration through Git.
               </li>
             </ul>
           </div>
@@ -280,65 +328,49 @@
         <div class="cv-row">
           <div class="cv-date">2017 – 2021</div>
           <div class="cv-content">
-            <h3>B.Sc. in Computer Science & Information Technology (CSIT)</h3>
-            <span class="institution">Tribhuvan University, Nepal</span>
-            <p>
-              Completed a comprehensive 4-year degree with a final score of
-              <strong>64.5%</strong>.
-            </p>
+            <h3>B.Sc. in Computer Science & IT (CSIT)</h3>
+            <span class="institution"
+              >Tribhuvan University, Nepal | Score: 64.5%</span
+            >
             <ul>
               <li>
-                <strong>Core Competencies:</strong> Data Structures &
-                Algorithms, Software Engineering, DBMS, Operating Systems,
-                Networking, and Web Technologies.
+                Core focus on Software Engineering, Data Structures, DBMS, and
+                Operating Systems.
               </li>
               <li>
-                <strong>Thesis/Project:</strong> Developed a Learning Management
-                System (LMS) demonstrating full-stack integration using
-                Python/Django and MySQL.
+                Capstone Project: Learning Management System (Full-stack
+                Django/MySQL).
               </li>
             </ul>
           </div>
         </div>
-
         <div class="cv-row">
           <div class="cv-date">2014 – 2016</div>
           <div class="cv-content">
-            <h3>Higher Secondary Education (+2 Science)</h3>
+            <h3>Higher Secondary (+2 Science)</h3>
             <span class="institution"
               >Bagiswori Higher Secondary School, Nepal</span
             >
-            <p>Focused on Mathematics, Physics, and Computer Science.</p>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Professional Development (2022 – 2024)</h2>
+        <h2>Specialization Period (2022 – 2024)</h2>
         <div class="cv-row">
           <div class="cv-date">2022 – 2024</div>
           <div class="cv-content">
-            <h3>Independent Technical Specialization & Research</h3>
-            <p>
-              Dedicated bridge period focused on advanced software development
-              and academic preparation:
-            </p>
+            <h3>Independent Technical Development & Research</h3>
             <ul>
               <li>
-                Completed advanced coursework in React.js and Django REST
-                Framework via project-based learning.
+                Project-based mastery of React.js and Django REST Framework.
               </li>
               <li>
-                Achieved professional English proficiency (IELTS Band 8.0) for
-                international academic environments.
+                Achieved **IELTS Overall Band 8.0** for academic readiness.
               </li>
               <li>
-                Researched German software engineering standards and TU
-                Chemnitz's Web Engineering curriculum.
-              </li>
-              <li>
-                Developed independent full-stack applications to strengthen
-                portfolio and practical problem-solving skills.
+                Conducted research on German web engineering standards and
+                scalable software architectures.
               </li>
             </ul>
           </div>
@@ -362,24 +394,16 @@
             <strong>Tools:</strong> Git, GitHub, Docker (Basics), Postman, VS
             Code
           </div>
-          <div class="skill-item">
-            <strong>Web Concepts:</strong> REST APIs, JSON, JWT, Responsive
-            Design
-          </div>
-          <div class="skill-item">
-            <strong>Others:</strong> WordPress, Software Architecture, Linux
-            Basics
-          </div>
         </div>
       </section>
 
       <section>
-        <h2>Languages & Certificates</h2>
+        <h2>Languages</h2>
         <div class="cv-row">
           <div class="cv-date">English</div>
           <div class="cv-content">
-            <strong>IELTS Academic - Overall Band Score 8.0</strong><br />
-            (Listening: 9.0, Reading: 9.0, Writing: 6.5, Speaking: 6.5)
+            <strong>IELTS Academic: 8.0</strong> (L: 9.0, R: 9.0, W: 6.5, S:
+            6.5)
           </div>
         </div>
         <div class="cv-row" style="margin-top: -10px">
@@ -399,18 +423,9 @@
           <strong>Date:</strong> 30 June 2026
         </div>
 
-        <div>
-          <img src="sign.png" style="height: 55px" /><br />
-          <strong
-            style="
-              text-align: center;
-              border-top: 1px solid #000;
-              min-width: 200px;
-              padding-top: 5px;
-            "
-          >
-            Sabin Prajapati
-          </strong>
+        <div class="sign-box">
+          <img src="sign.png" alt="Signature" style="height: 60px" /><br />
+          <div class="sign-line">Sabin Prajapati</div>
         </div>
       </div>
     </div>
